@@ -1,0 +1,23 @@
+https://readouble.com/laravel/6.x/ja/homestead.html
+
+vi Homestead.yaml
+folders:
+    - map: /Users/yamamotokou/Desktop/work/checkStock/for_tallsecret
+      to: /home/vagrant/for_tallsecret
+
+sites:
+    - map: chstock.com
+      to: /home/vagrant/for_tallsecret/public
+
+vi /etc/hosts
+192.168.10.10 chstock.com
+
+vagrant ssh
+cd for_tallsecret/
+composer update
+
+mysql -u root -psecret
+GRANT ALL ON *.* TO root@localhost IDENTIFIED BY 'root';
+FLUSH PRIVILEGES;
+
+
