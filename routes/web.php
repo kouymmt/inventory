@@ -15,6 +15,7 @@ Route::post('/','SettingController@set')->name('setting_data');
 Route::get('/csv_import', 'CsvImportController@index')->name('CsvImport_index');
 Route::post('/csv_import', 'CsvImportController@CsvImport')->name('CsvImport');
 Route::get('/tallsecretStock', 'TsDataController@index')->name('tallsecretStock');
+Route::get('/items', 'TsDataController@getItems');
 Route::get('/scraping','ScrapingController@getdata')->name('scraping');
 Route::get('/restart','RestartController@restart')->name('restart');
 Route::get('/stockout','StockoutController@index')->name('Stockout');

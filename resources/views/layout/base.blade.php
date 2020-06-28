@@ -3,7 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-　　　　
+        <!-- vue.jsのための　-->
+        <!-- ajax通信をするときはcsrfトークンを使う -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+        
         <title>在庫データ取得</title>
 　　　　　<link rel="stylesheet" type="text/css" href="/css/app.css">　
         <!-- Fonts -->
@@ -18,6 +22,7 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                
             }
 
             .full-height {
@@ -61,6 +66,7 @@
             .m-b-md {
                 margin-bottom: 5px;
             }
+            
         </style>
     </head>
     <body>
@@ -80,6 +86,7 @@
             @endif
 
             <div class="content">
+            <div　style＝”position:sticky">
                 <div class="title m-b-md">
                     @yield('title')
                 </div>
@@ -89,12 +96,16 @@
                     <a href="{{ route('setting') }}">set Parameters</a>
                     <a href="{{ route('CsvImport_index') }}">Csv Import</a>
                     <a href="{{ route('tallsecretStock') }}">不足現状</a>
-               
-                    <a href="https://github.com/kouymmt/for_tallsecret/tree/in_progress">GitHub</a>
-                </div><br>
+                    <a href="https://github.com/kouymmt/inventory/tree/dev">GitHub</a>
+                </div>
+                </div>
+                <div style="float:none">
                 @section('content')
                 @show
+                </div>
             </div>
         </div>
+        <!-- vue.jsのための　-->
+        <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>

@@ -1,7 +1,10 @@
 @extends('layout.base')
 @section('title','tallsecret current status')
 @section('content')
-<table border = "1">
+<div id = "app">
+<scroll-component></scroll-component>
+</div>
+<!-- <table border = "1">
 <tr>
 <th>商品ID</th>
 <th>商品コード</th>
@@ -22,5 +25,5 @@
 @endforeach
 </table> 
 {{ $stocks->links() }}
-@endsection
+@endsection -->
 
