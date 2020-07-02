@@ -24,6 +24,7 @@
         <td>{{item.ts_inventory}}</td>
         </tr>
         </tbody>
+        </thead>
         </table>
     </div>    
     <!-- ローディングアニメーション -->
@@ -86,7 +87,9 @@
 </script>
 
 <style scoped>
-table thead{
-    position:sticky
+thead th{
+  position: sticky;
+  top: 75;
+  background-color:#c0c0c0;
 }
-</style>]
+</style>

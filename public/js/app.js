@@ -1996,6 +1996,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -6535,7 +6536,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\ntable thead[data-v-ce783dd6]{\n    position:-webkit-sticky;\n    position:sticky\n}\n", ""]);
+exports.push([module.i, "\nthead th[data-v-ce783dd6]{\n  position: -webkit-sticky;\n  position: sticky;\n  top: 75;\n  background-color:#c0c0c0;\n}\n", ""]);
 
 // exports
 

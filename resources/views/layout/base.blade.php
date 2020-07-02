@@ -66,6 +66,17 @@
             .m-b-md {
                 margin-bottom: 5px;
             }
+            .stick {
+                position: -webkit-sticky;
+                position: sticky;
+                top:0;
+            }
+            table{
+                margin-right:auto;
+                margin-left:auto;
+            }
+
+}
             
         </style>
     </head>
@@ -86,22 +97,25 @@
             @endif
 
             <div class="content">
-            <div　style＝”position:sticky">
-                <div class="title m-b-md">
-                    @yield('title')
+            <div>
+            <div>
+                <div style="position:sticky;top:0;background-color:#c0c0c0">
+                    <div class="title m-b-md">
+                        @yield('title')  
+                    </div>      
+                    <div class="links">
+                        <a href="{{ route('Stockout') }}">在庫不足</a>
+                        <a href="{{ route('stockadded') }}">追加在庫</a>
+                        <a href="{{ route('setting') }}">set Parameters</a>
+                        <a href="{{ route('CsvImport_index') }}">Csv Import</a>
+                        <a href="{{ route('tallsecretStock') }}">不足現状</a>
+                        <a href="https://github.com/kouymmt/inventory/tree/dev">GitHub</a>
+                    </div>
+                </div> 
+              
+                    @section('content')
+                    @show
                 </div>
-                <div class="links">
-                    <a href="{{ route('Stockout') }}">在庫不足</a>
-                    <a href="{{ route('stockadded') }}">追加在庫</a>
-                    <a href="{{ route('setting') }}">set Parameters</a>
-                    <a href="{{ route('CsvImport_index') }}">Csv Import</a>
-                    <a href="{{ route('tallsecretStock') }}">不足現状</a>
-                    <a href="https://github.com/kouymmt/inventory/tree/dev">GitHub</a>
-                </div>
-                </div>
-                <div style="float:none">
-                @section('content')
-                @show
                 </div>
             </div>
         </div>
