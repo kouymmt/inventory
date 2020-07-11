@@ -1,9 +1,13 @@
 @extends('layout.base')
 @section('title','tallsecret current status')
+
 @section('content')
 <div id = "app">
 <scroll-component></scroll-component>
+@component('components.search')@endcomponent
 </div>
+
+
 <!-- <table border = "1">
 <tr>
 <th>商品ID</th>

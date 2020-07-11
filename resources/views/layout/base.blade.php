@@ -98,11 +98,10 @@
 
             <div class="content">
             <div>
-            <div>
-                <div style="position:sticky;top:0;background-color:#c0c0c0">
+                <div style="position:sticky;top:0;background-color:#c0c0c0">   
                     <div class="title m-b-md">
                         @yield('title')  
-                    </div>      
+                    </div> 
                     <div class="links">
                         <a href="{{ route('Stockout') }}">在庫不足</a>
                         <a href="{{ route('stockadded') }}">追加在庫</a>
@@ -111,8 +110,7 @@
                         <a href="{{ route('tallsecretStock') }}">不足現状</a>
                         <a href="https://github.com/kouymmt/inventory/tree/dev">GitHub</a>
                     </div>
-                </div> 
-              
+                </div>
                     @section('content')
                     @show
                 </div>
