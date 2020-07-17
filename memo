@@ -20,4 +20,7 @@ mysql -u root -psecret
 GRANT ALL ON *.* TO root@localhost IDENTIFIED BY 'root';
 FLUSH PRIVILEGES;
 
+composer update
 
+php artisan queue:flush
+php artisan queue:work

@@ -50,7 +50,8 @@
         </div>
         
       
-        <div><li align ="left"><input type="submit" value="登録"></div>
+        <div><input type="submit" value="登録"></div>
+        <br>
         <button type="button"><a href="{{ route('scraping') }}">Start!</a></button>
         <button type="button"><a href="{{ route('restart') }}">未実行処理を消去</a></button>
 </ul>

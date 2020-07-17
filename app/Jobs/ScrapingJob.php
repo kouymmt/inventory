@@ -12,6 +12,7 @@ use App\Services\Scraper;
 class ScrapingJob implements ShouldQueue
 {
     public $tries = 1;
+    public $timeout = 360000;
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     /**

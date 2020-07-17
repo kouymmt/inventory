@@ -23,9 +23,10 @@ class RestartController extends Controller
     DB::table('ch_data')->delete();
     DB::table('ch_data_img')->delete();
     DB::table('ch_data_size')->delete();
-    DB::table('tsdata')->delete();
+   // DB::table('tsdata')->delete();
 
-    //todo:workerを動かす。Artisan::call('queue:work');
+    
+   // Artisan::call('queue:work');
     return redirect()->route('setting');
 }
 }

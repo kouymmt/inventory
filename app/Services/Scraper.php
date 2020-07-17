@@ -32,13 +32,27 @@ class Scraper
       // $client->setClient($guzzleClient);
    
       // 検索結果の取得
-       $crawler = $client->request('GET', $url);
+      $attempt = 0;
+        if($client->request('GET', $url) != null){
+             $crawler = $client->request('GET', $url);
+        } else {
+            do {
+               try{
+                  $crawler = $client->request('GET', $url);
+               }catch(\InvalidArgumentException $e){
+                  $attempt++;
+                  sleep(5);
+                  break;
+               }
+            }  while ($attempt <= 5);
+         }
+      
        $textInfo = $crawler->filterXPath('//*[@id="goodsInfo"]/div[2]');
        if($textInfo->count() === 0){
           echo "no data!";
        }else{
        /** ch_id */
-         switch(preg_match("/(?<=商品货号：)[0-9a-zA-Z-]+/",$textInfo->text(),$match)){
+         switch(preg_match('/(?<=商品货号：)[0-9a-zA-Z-]+/',$textInfo->text(),$match)){
          case 0:
          case false:
          $ch_id = "";
@@ -50,7 +64,7 @@ class Scraper
          break;
          }
          /** ch_base_price */                      
-         switch(preg_match("/(?<=市场价).*会 员 价/",$textInfo->text(),$match)){
+         switch(preg_match('/(?<=市场价).*会 员 价/',$textInfo->text(),$match)){
             case 0:
             case false:
             $ch_base_price = "";
@@ -64,7 +78,7 @@ class Scraper
          
       
          /** ch_price */
-         switch(preg_match("/(?<=本店价：).*市场价/",$textInfo->text(),$match)){
+         switch(preg_match('/(?<=本店价：).*市场价/',$textInfo->text(),$match)){
             case 0:
             case false:
             $ch_price = "";
