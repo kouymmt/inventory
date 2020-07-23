@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\TsDatum;
 
 class StockoutController extends Controller
 {
     public function index(){
-     $stockout =  DB::table('tsdata')->join('ch_data','ts_id','=','ch_data.ch_id')->leftJoin('ch_data_size','ts_id','=','ch_data_size.ch_id')->whereNull('ch_size')->paginate();
+     $stockout = TsDatum::select()
+     ->leftjoin('ch_data','ch_data.ch_id','=','ts_id')
+     ->leftjoin('ch_data_size',function($join){
+         $join->on('ts_id','=','ch_data_size.ch_id');
+         $join->on('tsdata.ts_size','=','ch_data_size.ch_size');
+        })
+        ->paginate();
      return view('Stockout.index',compact('stockout'));
     }
 }
