@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\TsDatum;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 // use League\Csv\Reader;
 // use League\Csv\Statement;
@@ -32,7 +33,7 @@ class CsvImportController extends Controller
     //  league\csvは不安定と判断し、導入を取りやめる。  
     //}
   public function CsvImport(Request $request,  TsDatum $ts_data){
-    $ts_data::truncate();
+    DB::table('tsdata')->delete();
     $ts_data->GetCsv($request);
     
     
