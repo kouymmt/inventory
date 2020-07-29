@@ -142,10 +142,9 @@ class Scraper
       unset($ch_data_img);
       unset($ch_data_size);
    }
-   public function getdata(){
+   public function getdata($num){
       /** read setting*/
-      $start_page =  Setting::first()->start_page;
-      $end_page =  Setting::first()->end_page;
+      
       $second_min =Setting::first()->second_min;
       $second_max =Setting::first()->second_max;
       $start_delay =Setting::first()->start_delay;
@@ -155,13 +154,9 @@ class Scraper
       $mark_up_spread = Setting::first()->mark_up_spread;
       
       /** スクレイピング */
-      
-      for($num = $start_page;$num <= $end_page;$num++)
-      {
       sleep(mt_rand($second_min ,$second_max ));
       $this->scrape($num);
       echo "$num"."のデータを取得中\n";
-      }
    }
    
 

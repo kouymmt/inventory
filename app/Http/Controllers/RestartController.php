@@ -23,6 +23,8 @@ class RestartController extends Controller
     DB::table('ch_data')->delete();
     DB::table('ch_data_img')->delete();
     DB::table('ch_data_size')->delete();
+    DB::table('jobs')->delete();
+    DB::table('failed_jobs')->delete();
     //todo ブラウザからstop＆startできるようにする。  
     // exec('php ../../../artisan queue:work'); 
     // \Artisan('queue:work');

@@ -11,8 +11,8 @@ use App\Services\Scraper;
 
 class ScrapingJob implements ShouldQueue
 {
-    public $tries = 1;
-    public $timeout = 350;
+    public $tries = 3;
+    
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     /**
@@ -20,9 +20,10 @@ class ScrapingJob implements ShouldQueue
      *
      * @return void
      */
-    public function __construct()
+    protected $num;
+    public function __construct($num)
     {
-        //
+        $this->num = $num;
     }
 
     /**
@@ -33,7 +34,7 @@ class ScrapingJob implements ShouldQueue
     public function handle()
     {
         $scraped_data = app()->make(Scraper::class);
-        $scraped_data->getdata();
+        $scraped_data->getdata($this->num);
 
     }
 
