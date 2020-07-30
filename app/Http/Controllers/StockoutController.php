@@ -14,6 +14,8 @@ class StockoutController extends Controller
          $join->on('ts_id','=','ch_data_size.ch_id');
          $join->on('tsdata.ts_size','=','ch_data_size.ch_size');
         })
+        ->whereNull('ch_data_size.ch_size')
+        ->where('tsdata.stock','!=','0')
         ->paginate();
      return view('Stockout.index',compact('stockout'));
     }

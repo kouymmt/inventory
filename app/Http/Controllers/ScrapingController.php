@@ -20,9 +20,9 @@ class ScrapingController extends Controller {
     */
     public function getdata(){
      DB::table('jobs')->delete();
-     DB::table('failed_jobs')->delete();   
+     DB::table('failed_jobs')->delete();  
      $start_page =  Setting::first()->start_page;
-     $end_page =  Setting::first()->end_page;   
+     $end_page =  Setting::first()->end_page;
     for($num = $start_page;$num <= $end_page;$num++){
     ScrapingJob::dispatch($num);
     }
