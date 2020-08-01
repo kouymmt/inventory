@@ -16,7 +16,6 @@ class CreateChExcludeTable extends Migration
         Schema::create('ch_exclude', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('ch_id');
-            $table->string('ex_flg');
         });
     }
 

@@ -2,13 +2,13 @@
 @section('title','tallsecret current status')
 @section('content')
 <table border = "1">
+@component('components.exclude')@endcomponent
 <tr>
 <th>商品コード</th>
 <th>tallsecretサイズ</th>
 <th>何金昌リンク</th>
-
 </tr>
-@foreach($stockAdded as $row)
+@foreach($newItem as $row)
 <tr>
   <td>{{ $row->ch_id }}</td>
   <td>{{ $row->ch_size }}</td>
@@ -16,6 +16,6 @@
   </tr>
 @endforeach
 </table> 
-{{ $stockAdded->links() }}
+{{ $newItem->links() }}
 @endsection
 
