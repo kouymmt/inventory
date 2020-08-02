@@ -10,6 +10,6 @@ input{
 <div>
 {!! Form::open(['route' => 'register', 'method' => 'post']) !!}
 {{Form::input('text', 'register')}}
-{!! Form::submit('登録') !!}
+{!! Form::submit('販売対象外商品　登録') !!}
 {!! Form::close() !!}
 </div>
