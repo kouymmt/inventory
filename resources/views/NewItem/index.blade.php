@@ -5,17 +5,17 @@
 @component('components.exclude')@endcomponent
 <tr>
 <th>商品コード</th>
-<th>tallsecretサイズ</th>
-<th>何金昌リンク</th>
+{{-- <th>画像url</th> --}}
+<th>何金昌url</th>
 </tr>
 @foreach($newItem as $row)
 <tr>
-  <td>{{ $row->ch_id }}</td>
-  <td>{{ $row->ch_size }}</td>
-  <td><a href = "{{ $row->ch_url }}" target="_blank" rel="noopener">　何金昌</a></td>
+  <td>&nbsp {{ $row->ch_id }} &nbsp</td>
+ {{-- <td>&nbsp curl -O {{ $row->img_url}}&nbsp</td>　--}}
+  <td><a href = "{{ $row->ch_url }}" target="_blank" rel="noopener">何金昌</a></td>
   </tr>
 @endforeach
-</table> 
+</table>
 {{ $newItem->links() }}
 @endsection
 

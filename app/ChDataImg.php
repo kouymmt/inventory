@@ -12,4 +12,7 @@ class ChDataImg extends Model
     ]; 
     protected $table = 'ch_data_img';
     public $timestamps = false;
+    public function setChIdAttribute($value){
+        $this->attributes['ch_id'] =  "TS".$value;
+    }
 }
