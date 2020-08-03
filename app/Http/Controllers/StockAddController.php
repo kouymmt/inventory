@@ -17,14 +17,14 @@ class StockAddController extends Controller
             $join->on('ts_id','=','ch_data_size.ch_id');
             $join->on('tsdata.ts_size','=','ch_data_size.ch_size');
            })
-           ->whereNotNull('ch_data_size.ch_size')
-           ->whereNull('tsdata.ts_size')
-           ->whereIn('ch_data.ch_id',function($query){
+        ->whereNotNull('ch_data_size.ch_size')
+        ->whereNull('tsdata.ts_size')
+        ->whereIn('ch_data.ch_id',function($query){
                $query->select('ts_id');
                $query->from('tsdata');
                }
            )
-           ->whereNotIn('ch_data.ch_id',function($query){
+        ->whereNotIn('ch_data.ch_id',function($query){
                $query->select('ch_id');
                $query->from('ch_exclude');
            }
