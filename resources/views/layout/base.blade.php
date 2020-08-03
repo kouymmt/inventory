@@ -104,6 +104,7 @@
                     </div> 
                     <div class="links">
                         <a href="{{ route('Stockout') }}">在庫不足</a>
+                        <a href="{{ route('StockAdd') }}">在庫追加</a>
                         <a href="{{ route('newItem') }}">新商品</a>
                         <a href="{{ route('setting') }}">set Parameters</a>
                         <a href="{{ route('CsvImport_index') }}">Csv Import</a>

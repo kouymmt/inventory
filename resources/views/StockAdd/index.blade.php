@@ -8,14 +8,14 @@
 <th>何金昌リンク</th>
 
 </tr>
-@foreach($stockout as $row)
+@foreach($stockAdd as $row)
 <tr>
-  <td>{{ $row->ts_id }}</td>
-  <td>{{ $row->ts_size }}</td>
+  <td>{{ $row->ch_id }}</td>
+  <td>{{ $row->ch_size }}</td>
   <td><a href = "{{ $row->ch_url }}" target="_blank" rel="noopener">何金昌</a></td>
   </tr>
 @endforeach
 </table> 
-{{ $stockout->links() }}
+{{ $stockAdd->links() }}
 @endsection
 

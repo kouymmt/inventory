@@ -19,6 +19,7 @@ Route::get('/items', 'TsDataController@getItems');
 Route::get('/scraping','ScrapingController@getdata')->name('scraping');
 Route::get('/restart','RestartController@restart')->name('restart');
 Route::get('/stockout','StockoutController@index')->name('Stockout');
+Route::get('/stockAdd','StockAddController@index')->name('StockAdd');
 Route::get('/newItem','NewItemController@index')->name('newItem');
 Route::get('/search','SearchController@getData')->name('search');
 Route::post('/exclude','ExcludeController@register')->name('register');

@@ -25,7 +25,7 @@ class TsDatum extends Model
         'ts_base_price' => 'integer',
         'ts_normal_price' => 'integer',
     ];
-
+    
     public function GetCsv(Request $request){
         $file_path = $request->file('file')->getPathname();
         $file = new SplFileObject($file_path);
