@@ -18,7 +18,7 @@ class NewItemController extends Controller
      ->whereNotNull('ch_data_size.ch_size')
      ->whereNull('tsdata.ts_id')
      ->whereNull('ch_exclude.ch_id')
-    ->groupBy('ch_data.ch_id','ch_data.ch_url')
+     ->groupBy('ch_data.ch_id','ch_data.ch_url')
      ->paginate();
    
      return view('NewItem.index',compact('newItem'));

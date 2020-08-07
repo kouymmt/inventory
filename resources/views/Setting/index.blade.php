@@ -38,18 +38,7 @@
         <input type="hidden"  name="truncate_flg" value= 0>
         <input type="checkbox"  name="truncate_flg" size="2" value= 1>
         </div>
-
-        <li><div class="form-inline">
-        <label for="exchange_rate">:為替レート</label>
-        <input type="number"  name="exchange_rate" size="2" value = "20"></div><div class="form-inline">
-        </div>
- 
-        <li><div class="form-inline">
-        <label for="mark_up_spread">上乗せ価格  :</label>
-        <input type="number"  name="mark_up_spread" size="2" value = "13000"> 
-        </div>
-        
-      
+           
         <div><input type="submit" value="登録"></div>
         <br>
         <button type="button"><a href="{{ route('scraping') }}">Start!</a></button>
@@ -64,8 +53,6 @@
       <tr><th>スクレイピング最小間隔 :</th><td>{{ $set_in_db['second_min']}}</td></tr>
       <tr><th>スクレイピング最大間隔　:</th><td>{{ $set_in_db['second_max']}}</td></tr>
       <tr><th>開始遅延時間 :</th><td>{{ $set_in_db['start_delay']}}</td></tr>
-      <tr><th>為替レート :</th><td>{{ $set_in_db['exchange_rate']}}</td></tr>
-      <tr><th>上乗せ価格 :</th><td>{{ $set_in_db['mark_up_spread']}}</td></tr>
    </table>
       @endif
    </div>

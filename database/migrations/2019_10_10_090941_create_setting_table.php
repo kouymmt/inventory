@@ -21,8 +21,6 @@ class CreateSettingTable extends Migration
             $table->integer('second_max');
             $table->integer('start_delay');
             $table->boolean('truncate_flg');
-            $table->float('exchange_rate');
-            $table->integer('mark_up_spread');
         });
     }
 

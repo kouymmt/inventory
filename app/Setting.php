@@ -13,7 +13,6 @@ class Setting extends Model
                             'second_max',
                             'start_delay',
                             'truncate_flg',
-                            'exchange_rate',
-                            'mark_up_spread'];
+                            ];
                         
 }

@@ -21,5 +21,6 @@ Route::get('/restart','RestartController@restart')->name('restart');
 Route::get('/stockout','StockoutController@index')->name('Stockout');
 Route::get('/stockAdd','StockAddController@index')->name('StockAdd');
 Route::get('/newItem','NewItemController@index')->name('newItem');
+Route::get('/price_check','PriceCheckController@index')->name('price_check');
 Route::get('/search','SearchController@getData')->name('search');
 Route::post('/exclude','ExcludeController@register')->name('register');

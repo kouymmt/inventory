@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\ChData;
-
-
 use Illuminate\Http\Request;
-
+use App\ChData;
 class StockAddController extends Controller
 {
     public function index(){

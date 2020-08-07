@@ -33,7 +33,7 @@ class CsvImportController extends Controller
     //  league\csvは不安定と判断し、導入を取りやめる。  
     //}
   public function CsvImport(Request $request,  TsDatum $ts_data){
-    DB::table('tsdata')->delete();
+    DB::table('tsdata')->truncate();
     $ts_data->GetCsv($request);
     
     
