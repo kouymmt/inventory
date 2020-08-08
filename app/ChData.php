@@ -14,6 +14,7 @@ class ChData extends Model
         'num',
         'error_flg'
     ];
+    
     public $timestamps = false;
     public function setChIdAttribute($value){
         $this->attributes['ch_id'] =  "TS".$value;
@@ -26,20 +27,20 @@ class ChData extends Model
        }
     public function getChPriceAttribute($value){
         if($value > config('const.price_range_1') && $value < config('const.price_range_2')){
-            return floatval($value) + config('const.premium_1');
-        }elseif($value >200000){
-            return floatval($value) + 100000;
+            return floatval($value) + config('const.add_1');
+        }elseif($value >　config('const.price_range_2')){
+            return floatval($value) + config('const.add_2');
         }else{
             return "$value";
-        }  //  return "";
+        } 
         }
         public function getChBasePriceAttribute($value){
             if($value > config('const.price_range_1') && $value < config('const.price_range_2')){
-                return floatval($value) + config('const.premium_1');
+                return floatval($value) + config('const.add_1');
             }elseif($value > config('const.price_range_2')){
-                return floatval($value) + config('const.premium_2');
+                return floatval($value) + config('const.add_2');
             }else{
                 return "$value";
-            }  //  return "";
+            }  
             }
 }
