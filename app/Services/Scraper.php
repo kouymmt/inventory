@@ -44,7 +44,7 @@ class Scraper
                   sleep(5);
                   break;
                }
-            }  while ($attempt <= 5);
+            }  while ($attempt <= 3);
          }
       
        $textInfo = $crawler->filterXPath('//*[@id="goodsInfo"]/div[2]');

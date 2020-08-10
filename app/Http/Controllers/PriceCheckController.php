@@ -17,7 +17,7 @@ class PriceCheckController extends Controller
         ->groupBy('ch_id','ts_id','ch_base_price','ts_base_price','ch_price','ts_normal_price','ch_url','stock')
         ->get();
         
-        
+
         return view('PriceCheck.index',compact('price_diff'));
 }
 }
