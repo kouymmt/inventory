@@ -15,7 +15,7 @@ class CreateChDataImgTable extends Migration
     {
         Schema::create('ch_data_img', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('ch_id');
+            $table->string('ch_id')->index();
             $table->string('img_url');
         });
     }

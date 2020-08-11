@@ -16,8 +16,8 @@ class CreateTsdataTable extends Migration
         Schema::create('tsdata', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('product_id');//0
-            $table->string('ts_id');//45
-            $table->string('stock');//46
+            $table->string('ts_id')->index();;//45
+            $table->string('show');//46
             $table->string('ts_size');//5
             $table->integer('ts_base_price');//49
             $table->integer('ts_normal_price');//50

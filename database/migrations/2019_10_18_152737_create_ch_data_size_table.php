@@ -15,7 +15,7 @@ class CreateChDataSizeTable extends Migration
     {
         Schema::create('ch_data_size', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('ch_id');
+            $table->string('ch_id')->index();
             $table->string('ch_size');
         });
     }

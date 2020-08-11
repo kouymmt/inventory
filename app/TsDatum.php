@@ -20,7 +20,7 @@ class TsDatum extends Model
     protected $casts = [
         'product_id' => 'integer',
         'ts_id' => 'string',
-        'stock' => 'string',
+        'show' => 'string',
         'ts_size' => 'string',
         'ts_base_price' => 'integer',
         'ts_normal_price' => 'integer',
@@ -35,7 +35,7 @@ class TsDatum extends Model
             if($row_count > 1){
             $data['product_id'] = mb_convert_encoding($row[0], 'UTF-8', 'SJIS');
             $data['ts_id'] = mb_convert_encoding($row[45], 'UTF-8', 'SJIS');
-            $data['stock'] = mb_convert_encoding($row[46], 'UTF-8', 'SJIS');
+            $data['show'] = mb_convert_encoding($row[46], 'UTF-8', 'SJIS');
             $data['ts_size'] = floatval(mb_substr(mb_convert_encoding($row[5], 'UTF-8', 'SJIS'),0,4));
             $data['ts_base_price'] = mb_convert_encoding($row[49], 'UTF-8', 'SJIS');
             $data['ts_normal_price'] = mb_convert_encoding($row[50], 'UTF-8', 'SJIS');

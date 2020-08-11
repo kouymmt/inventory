@@ -15,7 +15,7 @@ class CreateChDataTable extends Migration
     {
         Schema::create('ch_data', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('ch_id');
+            $table->string('ch_id')->index();
             $table->integer('ch_base_price');
             $table->integer('ch_price');
             $table->string('ch_url');

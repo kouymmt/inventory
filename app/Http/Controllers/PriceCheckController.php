@@ -9,12 +9,12 @@ use App\ChData;
 class PriceCheckController extends Controller
 {
     public function index(){
-        $price_diff = ChData::select('ch_id','ts_id','ch_base_price','ts_base_price','ch_price','ts_normal_price','ch_url','stock')
+        $price_diff = ChData::select('ch_id','ts_id','ch_base_price','ts_base_price','ch_price','ts_normal_price','ch_url','show')
         ->join('tsdata','ch_id','=','ts_id',)
-        ->where('tsdata.stock','<>','0') 
+        ->where('tsdata.show','<>','0') 
         ->whereColumn('ch_base_price','<>','ts_base_price')
         ->whereColumn('ch_price','<>','ts_normal_price')
-        ->groupBy('ch_id','ts_id','ch_base_price','ts_base_price','ch_price','ts_normal_price','ch_url','stock')
+        ->groupBy('ch_id','ts_id','ch_base_price','ts_base_price','ch_price','ts_normal_price','ch_url','show')
         ->get();
         
 
