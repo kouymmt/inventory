@@ -28,6 +28,7 @@ class RestartController extends Controller
     //todo ブラウザからstop＆startできるようにする。  
     // exec('php ../../../artisan queue:work'); 
     // \Artisan('queue:work');
+   // Artisan::call('queue:work');
    return redirect()->route('setting');
 }
 }

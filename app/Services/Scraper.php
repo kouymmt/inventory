@@ -150,7 +150,7 @@ class Scraper
       $start_delay =Setting::first()->start_delay;
       $truncate_flg =Setting::first()->truncate_flg;
       $exchange_rate = Setting::first()->exchange_rate;
-      $exchange_rate = config('fx_rate');
+      $exchange_rate = config('const.fx_rate');
       $mark_up_spread = config('const.mark_up');
       
       /** スクレイピング */

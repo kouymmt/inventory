@@ -110,7 +110,7 @@
                         <a href="{{ route('setting') }}">set Parameters</a>
                         <a href="{{ route('CsvImport_index') }}">Csv Import</a>
                         <a href="{{ route('tallsecretStock') }}">不足現状</a>
-                        <a href="https://github.com/kouymmt/inventory/tree/dev">GitHub</a>
+                        <a href="https://github.com/kouymmt/inventory/tree/dev" target="_blank">GitHub</a>
                     </div>
                 </div>
                     @section('content')

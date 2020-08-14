@@ -26,18 +26,18 @@ class ChData extends Model
         $this->attributes['ch_base_price'] =  floatval($value) * config('const.fx_rate') + config('const.mark_up');  
        }
     public function getChPriceAttribute($value){
-        if($value > config('const.price_range_1') && $value < config('const.price_range_2')){
+        if($value >= config('const.price_range_1') && $value < config('const.price_range_2')){
             return floatval($value) + config('const.add_1');
-        }elseif($value >　config('const.price_range_2')){
+        }elseif($value >= config('const.price_range_2')){
             return floatval($value) + config('const.add_2');
         }else{
             return "$value";
-        } 
+        }
         }
         public function getChBasePriceAttribute($value){
-            if($value > config('const.price_range_1') && $value < config('const.price_range_2')){
+            if($value >= config('const.price_range_1') && $value < config('const.price_range_2')){
                 return floatval($value) + config('const.add_1');
-            }elseif($value > config('const.price_range_2')){
+            }elseif($value >= config('const.price_range_2')){
                 return floatval($value) + config('const.add_2');
             }else{
                 return "$value";

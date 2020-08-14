@@ -10,7 +10,7 @@
         <li><div class="form-inline">
         <label for="start_page">start page　　:</label>
         
-        <input type="text"  name="start_page"value = "64">
+        <input type="text"  name="start_page"value = "65">
         </div>
 
         <li><div class="form-inline">
