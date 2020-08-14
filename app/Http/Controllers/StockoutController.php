@@ -16,6 +16,10 @@ class StockoutController extends Controller
         })
         ->whereNull('ch_data_size.ch_size')
         ->where('tsdata.show','!=','0')
+        ->whereNotIn('ch_data.ch_id',function($query){
+            $query->select('ch_id');
+            $query->from('ch_exclude');
+        })
         ->paginate();
      return view('Stockout.index',compact('stockout'));
     }
