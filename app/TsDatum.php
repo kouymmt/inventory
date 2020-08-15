@@ -42,7 +42,7 @@ class TsDatum extends Model
             $this->insert($data);  
         }
         $row_count++; 
-        }
+    }
     } 
 }
   

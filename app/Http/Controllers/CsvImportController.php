@@ -37,6 +37,7 @@ class CsvImportController extends Controller
     $ts_data->GetCsv($request);
     
     
+    
     return redirect()->route('setting')->with('message','現状在庫を読み込みました'); 
   //TODO リンクを作成する。
   //return redirect()->route('setting')->with('message',  　HTML::linkRoute('tallsecretStock', '現状在庫を読み込みました'));
