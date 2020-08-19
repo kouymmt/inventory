@@ -23,6 +23,8 @@ class ScrapingController extends Controller {
      DB::table('failed_jobs')->delete();  
      $start_page =  Setting::first()->start_page;
      $end_page =  Setting::first()->end_page;
+   //   $start_delay = DB::table('settings')->value('start_delay');
+   //      sleep($start_delay*60*60);
     for($num = $start_page;$num <= $end_page;$num++){
     ScrapingJob::dispatch($num);
     }

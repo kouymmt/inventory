@@ -147,7 +147,6 @@ class Scraper
       
       $second_min =Setting::first()->second_min;
       $second_max =Setting::first()->second_max;
-      $start_delay =Setting::first()->start_delay;
       $truncate_flg =Setting::first()->truncate_flg;
       $exchange_rate = Setting::first()->exchange_rate;
       $exchange_rate = config('const.fx_rate');

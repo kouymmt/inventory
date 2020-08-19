@@ -32,7 +32,7 @@ class ScrapingJob implements ShouldQueue
      * @return void
      */
     public function handle()
-    {
+    { 
         $scraped_data = app()->make(Scraper::class);
         $scraped_data->getdata($this->num);
 

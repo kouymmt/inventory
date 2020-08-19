@@ -11,6 +11,6 @@ class SearchController extends Controller
         $result = TsDatum::where('ts_id','like','%'.$keyword.'%')
         ->orWhere('product_id','like',$keyword)
         ->get();
-        return view('Stockout.search_result',compact('result')); 
+        return view('TsData.search_result',compact('result')); 
     }
 }
