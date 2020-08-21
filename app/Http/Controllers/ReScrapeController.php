@@ -28,6 +28,7 @@ class ReScrapeController extends Controller
         $rescrape = app()->make(Scraper::class);
         $rescrape->scrape($num);
 
-        return redirect()->route('Stockout');
+        // return redirect()->route('Stockout');
+        return redirect()->back();
 }
 }
