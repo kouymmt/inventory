@@ -29,5 +29,5 @@
 @endforeach
 </table> 
 {{ $stocks->links() }}
-@endsection -->
+@endsection
 
