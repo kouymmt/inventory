@@ -7,7 +7,7 @@ use App\ChData;
 class StockAddController extends Controller
 {
     public function index(){
-        $stockAdd = ChData::select('ch_data.ch_id','ch_data_size.ch_size','ch_data.ch_url')
+        $stockAdd = ChData::select('ch_data.ch_id','ch_data_size.ch_size','ch_data.ch_url','num')
         ->leftjoin('ch_data_size','ch_data.ch_id','=','ch_data_size.ch_id')
         ->leftjoin('ch_exclude','ch_data.ch_id','=','ch_exclude.ch_id')
         ->leftjoin('tsdata',function($join){
