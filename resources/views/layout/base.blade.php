@@ -103,13 +103,12 @@
                         @yield('title')  
                     </div> 
                     <div class="links">
+                        <a href="{{ route('tallsecretStock') }}">不足現状</a>
+                        <a href="{{ route('setting') }}">set Parameters</a>
                         <a href="{{ route('Stockout') }}">在庫不足</a>
                         <a href="{{ route('StockAdd') }}">在庫追加</a>
                         <a href="{{ route('price_check') }}">価格確認</a>
                         <a href="{{ route('newItem') }}">新商品</a>
-                        <a href="{{ route('setting') }}">set Parameters</a>
-                        <a href="{{ route('CsvImport_index') }}">Csv Import</a>
-                        <a href="{{ route('tallsecretStock') }}">不足現状</a>
                         <a href="https://github.com/kouymmt/inventory/tree/dev" target="_blank" rel="noopener">GitHub</a>
                     </div>
                 </div>

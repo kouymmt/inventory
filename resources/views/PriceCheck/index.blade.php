@@ -1,7 +1,7 @@
 @extends('layout.base')
 @section('title','tallsecret current status')
 @section('content')
-<table table border="1" width="60%" >
+<table table border="1" width="70%" >
 <tr>
   <th>商品コード         </th>
   <th>何金昌 価格        </th>

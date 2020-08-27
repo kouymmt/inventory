@@ -3,6 +3,7 @@
 
 @section('content')
 <div id = "app">
+@component('components.csvimport')@endcomponent
 <scroll-component></scroll-component>
 @component('components.search')@endcomponent
 </div>
