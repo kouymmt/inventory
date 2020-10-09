@@ -20,12 +20,12 @@
 
         <li><div class="form-inline">
         <label for="second_min">スクレイピング最小間隔　　:</label>
-        <input type="number"  name="second_min" value = "5">
+        <input type="number"  name="second_min" value = "9">
         </div>
         
         <li><div class="form-inline">
         <label for="second_max">スクレイピング最大間隔　　:</label>
-        <input type="number"  name="second_max" size="2" value = "8">
+        <input type="number"  name="second_max" size="2" value = "20">
         </div>
         
         <li><div class="form-inline">
