@@ -103,7 +103,7 @@
                         @yield('title')  
                     </div> 
                     <div class="links">
-                        <a href="{{ route('tallsecretStock') }}">不足現状</a>
+                        <a href="{{ route('tallsecretStock') }}">tallsecret現状</a>
                         <a href="{{ route('setting') }}">set Parameters</a>
                         <a href="{{ route('Stockout') }}">在庫不足</a>
                         <a href="{{ route('StockAdd') }}">在庫追加</a>
