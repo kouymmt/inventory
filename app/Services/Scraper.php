@@ -141,19 +141,16 @@ class Scraper
       unset($ch_data);
       unset($ch_data_img);
       unset($ch_data_size);
-   }
-   public function getdata($num){
-      /** read setting*/
-      
-      $second_min =Setting::first()->second_min;
-      $second_max =Setting::first()->second_max;
-      $truncate_flg =Setting::first()->truncate_flg;
-      $exchange_rate = Setting::first()->exchange_rate;
-      $exchange_rate = config('const.fx_rate');
-      $mark_up_spread = config('const.mark_up');
+   } 
+   /** read setting*/
+      function __construct(){
+      $this->second_min = Setting::first()->second_min;
+      $this->second_max = Setting::first()->second_max;
+      }
       
       /** スクレイピング */
-      sleep(mt_rand($second_min ,$second_max ));
+      public function getdata($num){          
+      sleep(mt_rand($this->second_min,$this->second_max));
       $this->scrape($num);
       echo "$num"."のデータを取得中\n";
    }
