@@ -25,3 +25,8 @@ composer update
 php artisan queue:flush
 php artisan queue:work
 
+vi /etc/cron.d/queue
+#0 * * * * root php ../../home/vagrant/for_tallsecret/artisan queue:restart
+*/20 * * * * root  supervisorctl restart all
+sudo service cron restart
+
