@@ -16,7 +16,7 @@ class Scraper
    public function scrape($num){    
       
       $url = "http://www.zgshoes.com/goods-$num.html";
-      /** Goutte ライブラリの事前準備 */                              
+      /** Goutte ライブラリの事前準備 */
       $client = new Client(); 
       /** リファラー偽装 */
       $agents = [
@@ -141,6 +141,7 @@ class Scraper
       unset($ch_data);
       unset($ch_data_img);
       unset($ch_data_size);
+      unset($client);
    } 
    /** read setting*/
       function __construct(){
