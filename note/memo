@@ -27,8 +27,6 @@ php artisan queue:work
 
 <<<<<<< HEAD:note/memo
 laravel-worker.confのnumprocsを１に設定していないが、↓は保険として
-=======
->>>>>>> aeb26cba03c16c3b6a0034059695b59d085fb6ba:note/memo
 vi /etc/cron.d/queue
 #0 * * * * root php ../../home/vagrant/for_tallsecret/artisan queue:restart
 */20 * * * * root  supervisorctl restart all
