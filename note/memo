@@ -25,7 +25,6 @@ composer update
 php artisan queue:flush
 php artisan queue:work
 
-<<<<<<< HEAD:note/memo
 laravel-worker.confのnumprocsを１に設定していないが、↓は保険として
 vi /etc/cron.d/queue
 #0 * * * * root php ../../home/vagrant/for_tallsecret/artisan queue:restart
