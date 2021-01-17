@@ -3,6 +3,7 @@
 @section('content')
 <table table border="1" width="70%" >
 <tr>
+  価格確認
   <th>商品コード         </th>
   <th>何金昌 価格        </th>
   <th>tallsecret価格    </th>

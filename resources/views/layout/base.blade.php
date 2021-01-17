@@ -7,7 +7,8 @@
         <!-- ajax通信をするときはcsrfトークンを使う -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
-        
+        <link rel="stylesheet" href="{{ asset('/css/tab.css') }}">
+
         <title>在庫データ取得</title>
 　　　　　<link rel="stylesheet" type="text/css" href="/css/app.css">　
         <!-- Fonts -->

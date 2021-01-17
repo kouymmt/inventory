@@ -2,6 +2,7 @@
 @section('title','tallsecret current status')
 @section('content')
 <table border = "1">
+新商品
 @component('components.exclude')@endcomponent
 <tr>
 <th>商品コード</th>
