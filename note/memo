@@ -31,3 +31,8 @@ vi /etc/cron.d/queue
 */20 * * * * root  supervisorctl restart all
 sudo service cron restart
 
+todo:
+log.io
+
+
+
