@@ -1,3 +1,4 @@
+//Homestead 
 https://readouble.com/laravel/6.x/ja/homestead.html
 
 vi Homestead.yaml
@@ -8,31 +9,39 @@ folders:
 sites:
     - map: chstock.com
       to: /home/vagrant/for_tallsecret/public
-
+//dsn
 vi /etc/hosts
 192.168.10.10 chstock.com
 
+//laravel install,update
 vagrant ssh
 cd for_tallsecret/
 composer update
 
-mysql -u root -proot
+db設定
+mysql -u root
 GRANT ALL ON *.* TO root@localhost IDENTIFIED BY 'root';
 FLUSH PRIVILEGES;
+mysql -u root -proot
 
-composer update
+php artisan migrate;
 
-php artisan queue:flush
-php artisan queue:work
 
-laravel-worker.confのnumprocsを１に設定していないが、↓は保険として
+
+
+
+//laravel-worker.confのnumprocsを１に設定していないが、↓は保険として
 vi /etc/cron.d/queue
 #0 * * * * root php ../../home/vagrant/for_tallsecret/artisan queue:restart
 */20 * * * * root  supervisorctl restart all
 sudo service cron restart
 
-todo:
-log.io
+//nginx
+vi /etc/nginx/sites-available/chstock.com
+client_max_body_size 50M;
+
+//todo log.io
+log.io-harvester 2> /dev/null &
 
 
 
