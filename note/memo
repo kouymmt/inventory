@@ -40,8 +40,8 @@ sudo service cron restart
 vi /etc/nginx/sites-available/chstock.com
 client_max_body_size 50M;
 
-//todo log.io
-log.io-harvester 2> /dev/null &
+//todo:log.io
+https://github.com/NarrativeScience/log.io
 
 
 
