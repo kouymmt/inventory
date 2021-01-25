@@ -1,0 +1,17 @@
+{
+  "messageServer": {
+    "port": 6689,
+    "host": "192.168.10.10"
+  },
+  "httpServer": {
+    "port": 6688,
+    "host": "192.168.10.10"
+  },
+  "debug": false,
+  "basicAuth": {
+    "realm": "queue_worker",
+    "users": {
+      "": ""
+    }
+  }
+}

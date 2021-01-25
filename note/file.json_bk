@@ -1,0 +1,15 @@
+{
+  "messageServer": {
+    "host": "192.168.10.10",
+    "port": 6689
+  },
+  "inputs": [
+    {
+      "source": "laravel_queue",
+      "stream": "queue_worker",
+      "config": {
+        "path": "/var/log/supervisor/worker.log"
+    }
+    }
+  ]
+}
