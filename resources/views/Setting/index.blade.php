@@ -57,5 +57,6 @@
       @endif
    </div>
    <iframe src=http://chstock.com:6688/#{%221611526999765%22:[%22queue_worker|laravel_queue%22]} width="700" height="200" ></iframe>
-  
+   <br>
+  <a href =http://chstock.com:6688/#{%221611526999765%22:[%22queue_worker|laravel_queue%22]} target=_blanl>大画面で開く</a>
   @endsection
