@@ -40,7 +40,7 @@ sudo service cron restart
 //nginx
 vi /etc/nginx/sites-available/chstock.com
 client_max_body_size 50M;
-vi worker
+
 
 //todo:log.io
 https://qiita.com/poruruba/items/7579243d9725b1cb23a5
