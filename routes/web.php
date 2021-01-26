@@ -25,5 +25,6 @@ Route::get('/newItem','NewItemController@index')->name('newItem');
 Route::get('/price_check','PriceCheckController@index')->name('price_check');
 Route::get('/search','SearchController@getData')->name('search');
 Route::post('/exclude','ExcludeController@register')->name('register');
+Route::get('/progress','ProgressController@index')->name('progress');
 
 

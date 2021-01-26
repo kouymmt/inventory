@@ -25,8 +25,9 @@
         
         <li><div class="form-inline">
         <label for="second_max">スクレイピング最大間隔　　:</label>
-        <input type="number"  name="second_max" size="2" value = "110">
+        <input type="number"  name="second_max" size="2" value = "70">
         </div>
+        
         
         <li><div class="form-inline">
         <label for="start_delay">開始遅延時間  :</label>
@@ -38,7 +39,8 @@
         <input type="hidden"  name="truncate_flg" value= 0>
         <input type="checkbox"  name="truncate_flg" size="2" value= 1>
         </div>
-           
+        
+
         <div><input type="submit" value="登録"></div>
         <br>
         <button type="button"><a href="{{ route('scraping') }}">Start!</a></button>
@@ -52,11 +54,13 @@
       <tr><th>end page :</th><td>{{ $set_in_db['end_page']}}</td></tr>
       <tr><th>スクレイピング最小間隔 :</th><td>{{ $set_in_db['second_min']}}</td></tr>
       <tr><th>スクレイピング最大間隔　:</th><td>{{ $set_in_db['second_max']}}</td></tr>
-      <tr><th>開始遅延時間 :</th><td>{{ $set_in_db['start_delay']}}</td></tr>
+      <!-- <tr><th>開始遅延時間 :</th><td>{{ $set_in_db['start_delay']}}</td></tr> -->
    </table>
       @endif
    </div>
    <iframe src=http://chstock.com:6688/#{%221611526999765%22:[%22queue_worker|laravel_queue%22]} width="700" height="200" ></iframe>
    <br>
   <a href =http://chstock.com:6688/#{%221611526999765%22:[%22queue_worker|laravel_queue%22]} target=_blanl>大画面で開く</a>
+   <br>
+  <a href="{{ action('ProgressController@index') }}">完了ページ確認</a>
   @endsection
