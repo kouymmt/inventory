@@ -9,7 +9,7 @@ class NewItemController extends Controller
 {
     public function index(){
      
-     $newItem = ChData::select('ch_data.ch_id','ch_data.ch_url')
+     $newItem = ChData::select('num','ch_data.ch_id','ch_data.ch_url')
      ->leftjoin('ch_data_size','ch_data.ch_id','=','ch_data_size.ch_id')
      ->leftjoin('ch_data_img','ch_data.ch_id','=','ch_data_img.ch_id')
      ->leftjoin('tsdata','ch_data.ch_id','=','tsdata.ts_id')
@@ -18,7 +18,7 @@ class NewItemController extends Controller
      ->whereNotNull('ch_data_size.ch_size')
      ->whereNull('tsdata.ts_id')
      ->whereNull('ch_exclude.ch_id')
-     ->groupBy('ch_data.ch_id','ch_data.ch_url')
+     ->groupBy('num','ch_data.ch_id','ch_data.ch_url')
      ->paginate();
    
      return view('NewItem.index',compact('newItem'));
