@@ -25,7 +25,7 @@
         
         <li><div class="form-inline">
         <label for="second_max">スクレイピング最大間隔　　:</label>
-        <input type="number"  name="second_max" size="2" value = "70">
+        <input type="number"  name="second_max" size="2" value = "110">
         </div>
         
         
