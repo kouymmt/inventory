@@ -42,7 +42,7 @@ vi /etc/nginx/sites-available/chstock.com
 client_max_body_size 50M;
 
 
-//todo:log.io
+//log.io
 https://qiita.com/poruruba/items/7579243d9725b1cb23a5
 http://logio.org/
 
@@ -52,6 +52,8 @@ lsof -i:6688
 kill pid
 log.io-server&
 log.io-file-input&
+id:""
+password:""
 
 
 
