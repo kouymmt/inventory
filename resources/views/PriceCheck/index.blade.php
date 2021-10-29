@@ -12,18 +12,19 @@
   <th>何金昌リンク       </th>
 </tr>
 @foreach($price_diff as $row)
-<tr> 
-@if($row->ch_base_price != $row->ts_base_price || $row->ch_price != $row->ts_normal_price)
+<tr>
+{{--@if($row->ch_base_price != $row->ts_base_price || $row->ch_price != $row->ts_normal_price)--}}
+    @if($row->ch_base_price > $row->ts_base_price || $row->ch_price > $row->ts_normal_price)
 <td>{{ $row->ch_id }}</td>
 <td>{{ $row->ch_base_price}}</td>
 <td>{{ $row->ts_base_price}}</td>
 <td>{{ $row->ch_price}}</td>
-<td>{{ $row->ts_normal_price}}</td>  
+<td>{{ $row->ts_normal_price}}</td>
 <td><a href = "{{ $row->ch_url }}" target="_blank" rel="noopener">何金昌</a></td>
  @endif
   </tr>
 @endforeach
-</table> 
+</table>
 {{-- $price_check->links() --}}
 @endsection
 

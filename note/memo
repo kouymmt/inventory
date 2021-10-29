@@ -1,9 +1,9 @@
-//Homestead 
+//Homestead
 https://readouble.com/laravel/6.x/ja/homestead.html
 
 vi Homestead.yaml
 folders:
-    - map: /Users/yamamotokou/Desktop/work/checkStock/for_tallsecret
+    - map: /Users/kouyamamoto/Desktop/work/checkStock/for_tallsecret
       to: /home/vagrant/for_tallsecret
 
 sites:
@@ -19,23 +19,16 @@ cd for_tallsecret/
 composer update
 
 db設定
-mysql -u root
-GRANT ALL ON *.* TO root@localhost IDENTIFIED BY 'root';
+mysql -uroot
+//GRANT ALL ON *.* TO root@localhost IDENTIFIED BY 'root';
+grant all privileges on for_tallsecret.* to 'root'@'localhost';
 FLUSH PRIVILEGES;
-mysql -u root -proot
 
 php artisan migrate;
 
-
-
-
-
-//laravel-worker.confのnumprocsを１に設定していないが、↓は保険として
-vi /etc/cron.d/queue
-#0 * * * * root php ../../home/vagrant/for_tallsecret/artisan queue:restart
-*/20 * * * * root  supervisorctl restart all
-1 */2 * * * root log.io-file-input
-sudo service cron restart
+phpバージョン変更
+php74
+sudo -s
 
 //nginx
 vi /etc/nginx/sites-available/chstock.com
@@ -43,9 +36,12 @@ client_max_body_size 50M;
 
 
 //log.io
+https://github.com/NarrativeScience/log.io
 https://qiita.com/poruruba/items/7579243d9725b1cb23a5
 http://logio.org/
 
+
+supervisorctl restart all
 
 lsof -i:6689
 lsof -i:6688

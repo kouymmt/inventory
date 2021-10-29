@@ -11,7 +11,7 @@
   "basicAuth": {
     "realm": "queue_worker",
     "users": {
-      "": ""
+ "": ""
     }
   }
 }
