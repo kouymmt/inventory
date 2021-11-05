@@ -7,7 +7,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use App\Services\Scraper;
+//use App\Services\Scraper;
 
 class ScrapingJob implements ShouldQueue
 {
@@ -32,8 +32,9 @@ class ScrapingJob implements ShouldQueue
      * @return void
      */
     public function handle()
-    { 
-        $scraped_data = app()->make(Scraper::class);
+    {
+//        $scraped_data = app()->make(Scraper::class);
+        $scraped_data = app()->make('Scraper');
         $scraped_data->getdata($this->num);
 
     }

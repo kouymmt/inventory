@@ -1,6 +1,7 @@
 [program:laravel-worker]
 process_name=%(program_name)s_%(process_num)02d
-command=php ../../../home/vagrant/for_tallsecret/artisan queue:work
+command=php ../../../home/vagrant/for_tallsecret/artisan queue:work --max-jobs=100 --max-time=1800
+
 autostart=true
 autorestart=true
 user=root

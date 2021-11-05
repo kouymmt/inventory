@@ -1,3 +1,5 @@
+caffeinate -d &//prevent imac to sleep
+
 //Homestead
 https://readouble.com/laravel/6.x/ja/homestead.html
 
@@ -34,14 +36,20 @@ sudo -s
 vi /etc/nginx/sites-available/chstock.com
 client_max_body_size 50M;
 
+//php-fpm 起動
+sudo service php7.4-fpm restart
+
+//supervisor
+vi /etc/supervisor/conf.d/laravel-worker.conf　⇦　コピーして貼り付け
+supervisorctl restart all
 
 //log.io
 https://github.com/NarrativeScience/log.io
 https://qiita.com/poruruba/items/7579243d9725b1cb23a5
 http://logio.org/
 
-
-supervisorctl restart all
+vi ~/.log.io/server.json　⇦　コピーして貼り付け
+vi ~/.log.io/inputs/file.json　⇦　コピーして貼り付け
 
 lsof -i:6689
 lsof -i:6688
